@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Imports\Import;
 use App\Models\Invoice;
 use Illuminate\Support\Facades\Log;
@@ -64,6 +63,7 @@ class InvoiceController extends Controller
         $verzeichnis = 'storage/app/Uploads/';
         $pattern = $verzeichnis . '*.csv';
         $gefundeneDateien = glob($pattern);
+
 
         if (count($gefundeneDateien)>0){
             for ($i = 0; $i < count($gefundeneDateien); $i++)
